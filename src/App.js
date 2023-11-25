@@ -1,24 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import { Grid } from 'semantic-ui-react';
+import AIForm from './components/AIForm';
+import Popup from './components/Popup';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Grid
+      centered
+      columns={1}
+      style={{ height: '100vh', width: '100vw', margin: 'auto' }}
+      verticalAlign="middle"
+    >
+      <Grid.Column>
+        <Popup />
+        <AIForm />
+      </Grid.Column>
+    </Grid>
   );
 }
 
